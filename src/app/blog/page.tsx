@@ -13,10 +13,10 @@ export default function BlogPage() {
   return (
     <div>
       <div className="mb-10">
-        <h1 className="text-3xl font-bold mb-2">Blog</h1>
+        <h1 className="text-3xl font-bold mb-2">Notes</h1>
         <p className="text-muted-foreground">
-          {posts.length} tulisan — catatan belajar dan hal-hal yang saya temukan
-          menarik.
+          {posts.length} entries — a collection of ideas, learnings, and things
+          worth remembering.
         </p>
       </div>
 

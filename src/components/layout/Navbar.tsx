@@ -7,19 +7,28 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { MobileMenu } from "./MobileMenu";
+import Link from "next/link";
+import Image from "next/image";
 
 const links = [
-  { label: "Beranda", href: "/" },
+  { label: "Home", href: "/" },
   { label: "Blog", href: "/blog" },
-  { label: "Tentang", href: "/about" },
+  { label: "About", href: "/about" },
 ];
 
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto px-4 max-w-3xl flex h-14 items-center">
-        <a href="/" className="font-semibold text-base mr-6">
-          Blog Pribadi
+        <a href="/" className="mr-6 flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Notes Logo"
+            width={32}
+            height={32}
+            priority
+            className="h-8 w-auto"
+          />
         </a>
 
         <NavigationMenu className="hidden md:flex">
