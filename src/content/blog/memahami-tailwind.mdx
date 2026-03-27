@@ -1,0 +1,33 @@
+---
+title: "Memahami Tailwind CSS dalam Sehari"
+date: "2025-03-22"
+excerpt: "Tailwind terasa aneh di awal, tapi begitu paham cara kerjanya, kamu tidak akan mau kembali ke CSS biasa."
+tags: ["tailwind", "css", "desain"]
+---
+
+## Tailwind bukan CSS biasa
+
+Di Tailwind, kamu tidak menulis file CSS terpisah. Semua styling ditulis langsung
+di elemen HTML menggunakan _utility classes_.
+
+## Contoh sederhana
+
+Tombol biasa dengan CSS:
+
+```css
+.tombol {
+  background-color: blue;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+```
+
+Tombol yang sama dengan Tailwind:
+
+```
+<button class="bg-blue-500 px-4 py-2 rounded-lg">Klik</button>
+```
+
+## Kenapa ini lebih cepat
+
+Kamu tidak perlu bolak-balik antara file HTML dan CSS. Semua ada di satu tempat.
