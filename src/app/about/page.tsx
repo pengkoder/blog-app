@@ -66,7 +66,7 @@ export default function AboutPage() {
         <div>
           <h1 className="text-2xl font-bold mb-1">Sneaze</h1>
           <p className="text-muted-foreground mb-3">Software Engineer</p>
-          <div className="flex gap-3">
+          <div className="flex gap-3 flex-wrap">
             {socials.map((s) => (
               <a href={s.href} key={s.label}>
                 <Button variant="outline" size="sm">

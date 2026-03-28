@@ -36,7 +36,7 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   return (
-    <article className="prose prose-neutral dark:prose-invert max-w-none">
+    <article className="prose prose-neutral dark:prose-invert max-w-none px-2 overflow-hidden">
       <PostHeader post={post} />
       <Separator className="my-8" />
       <MDXRemote source={post.content} />

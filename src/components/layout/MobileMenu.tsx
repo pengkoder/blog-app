@@ -14,9 +14,9 @@ import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { label: "Beranda", href: "/" },
+  { label: "Home", href: "/" },
   { label: "Blog", href: "/blog" },
-  { label: "Tentang", href: "/about" },
+  { label: "About", href: "/about" },
 ];
 
 function HamburgerIcon() {
@@ -47,7 +47,7 @@ export function MobileMenu() {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden" // hanya muncul di layar < md (768px)
+          className="md:hidden hover:cursor-pointer"
           aria-label="Buka menu navigasi"
         >
           <HamburgerIcon />
@@ -57,7 +57,7 @@ export function MobileMenu() {
       <SheetContent side="left" className="w-64 p-0">
         <SheetHeader className="px-6 py-5 border-b">
           <SheetTitle className="text-left text-base font-semibold">
-            Blog Pribadi
+            Notes
           </SheetTitle>
         </SheetHeader>
 
@@ -69,9 +69,9 @@ export function MobileMenu() {
               <a
                 key={link.href}
                 href={link.href}
-                onClick={() => setOpen(false)} // tutup menu setelah klik
+                onClick={() => setOpen(false)}
                 className={cn(
-                  "flex items-center px-3 py-2.5 rounded-md text-sm",
+                  "flex items-center px-3 py-2.5 rounded-md text-sm hover:cursor-pointer",
                   "transition-colors",
                   isActive
                     ? "bg-accent text-foreground font-medium"
@@ -91,7 +91,7 @@ export function MobileMenu() {
 
         <div className="px-6 py-4">
           <p className="text-xs text-muted-foreground">
-            Dibuat dengan Next.js & shadcn/ui
+            © {new Date().getFullYear()} Notes
           </p>
         </div>
       </SheetContent>
